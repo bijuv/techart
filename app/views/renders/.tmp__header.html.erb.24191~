@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>TECH-ART</title>
+        <%= stylesheet_link_tag "techartstyle", :media => "all" %>
+        <%= javascript_include_tag :defaults %>
+        <%= csrf_meta_tag %>
+		<script type="text/javascript">
+					var c=Date();
+					var t;
+					var timer_is_on=0;
+					
+					function timedCount()
+					{
+					document.getElementById('txt').value=c;
+					c=Date();
+					t=setTimeout("timedCount()",1000);
+					}
+					
+					function doTimer()
+					{
+					if (!timer_is_on)
+					  {
+					  timer_is_on=1;
+					  timedCount();
+					  }
+					}
+			</script> 
+    </head>
+    <body onload="doTimer()">
+    	<div id="banner">
+            <%= image_tag("globe.gif",:size=> "100x100") %>
+            <%= @page_title ||"Welcome to TechArt Blog" %>
+            <form action="articles/search" method="get">
+                <input id="q" name="q" type="text" /><input name="commit" type="submit" value="Search" />
+            
+			
+			
+			</form>
+        </div>
+		<input type="button" id="txt" style="background:transparent;border:none; float: right;color:black"/>
+    </body>
+</html>

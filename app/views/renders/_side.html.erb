@@ -1,0 +1,23 @@
+<div>
+	<% if session[:user_id] %>
+	    <%= "Welcome "+ session[:user_id] %>
+	    <%=button_to "logout",{:action=>'logout', :controller=>'users'},{:id => "button-color"} %>
+		<% @user = User.find_by_user_name(session[:user_id])%>
+		<% @article = Article.find_by_user_id(@user.id)%>
+		<%=button_to "New Article     ",new_article_path, {:id => "button-color"}%>
+	
+		<%= button_to "Delete Article", {:controller => "articles", :action => "delete_article"}, {:id => "button-color"} %>
+		<%=button_to "Edit profile      ",{:action => "edit"},{:id => "button-color"} %>
+		<%=button_to "Delete profile",{:action => "delete"},{:id => "button-color"}%>
+	
+		<%="Articles created by " + @user.user_name%>
+		<br />
+		<% for article in @user.articles %>
+			=>> <%=link_to article.art_title,article %><br />
+		<% end %>
+		<%#=link_to @article.art_title, @article %>
+	  <% else %>
+	    <%= button_to 'Login', login_users_path, {:id => "button-color"}%>
+	    <%= button_to 'New Registration', new_user_path ,{:id => "button-color"}%>
+	  <% end %>
+</div>

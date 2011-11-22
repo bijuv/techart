@@ -1,0 +1,205 @@
+/* header styles */
+#banner {
+    background-color: BLACK;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    font: small-caps 40px / 40px "Times New Roman", serif;
+    color: WHITE;
+    text-align: center;
+	margin: 0px;
+	height: 150px;
+}
+/* end header styles */
+
+/* left side styles */
+#left-side {
+	margin: 0px;
+    float: left;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 30em;
+    width: 14em;
+	background-image: url('/images/side.png');*/
+}
+
+#left-side a:hover {
+    color: YELLOW;
+    font-size: large;
+}
+
+/* end side styles */
+
+
+/* controller body styles */
+
+#body-style {
+    background-image: url('/images/JR.png');
+	margin: 0px;
+	/*background-color: lightblue;*/
+}
+
+/* end controller body styles */
+
+#button-color {
+	/*background-image: url('/images/b1.jpg');*/
+	color: WHITE;
+	border: NONE;
+	background-color: transparent;
+	background-image: url('/images/button_0.jpg');
+	background-repeat: no-repeat;
+	}
+
+#button-color a:hover {
+	/*background-image: url('/images/b1.jpg');*/
+	color: BLACK;
+	background-color: transparent;
+	background-image: url('/images/button_0.jpg');
+	background-repeat: no-repeat;
+	}
+
+
+/*--------------------------------------------------------*/
+#popular_articles {
+    float: right; 
+	font-size: x-medium;
+	width: 200px; 
+	padding: 10px;
+	color: MAROON;
+	
+}
+
+#latest_articles{
+	
+	font-size: x-medium;
+	width: 200px; 
+	padding: 10px;
+	color: YELLOW;
+}
+
+#search {
+   	background-image: url('/images/side.png');
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    color: BLUE;
+    text-align: center;
+    text-align: right;
+}
+
+#columns {
+    background: #141;
+}
+
+#main {
+    margin-left: 16em;
+    margin-right: 1em;
+    padding-top: 3ex;
+    padding-left: 2em;
+    padding-right: 25em;
+    width: 45em;
+}
+
+#store #notice {
+    color: #000;
+    border: 2px solid red;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #f0f0f0;
+    font: bold smaller sans-serif;
+}
+
+#store h1 {
+    font: 150% sans-serif;
+    color: #226;
+    border-bottom: 3px dotted #77d;
+}
+
+/* Styles for products/index */
+#product_list table {
+    border-collapse: collapse;
+}
+
+#product_list table tr td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+#product_list .list_image {
+    width: 60px;
+    height: 70px;
+}
+
+#product_list .list_description {
+    width: 60%;
+}
+
+#product_list .list_description dl {
+    margin: 0;
+}
+
+#product_list .list_description dt {
+    color: #244;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#product_list .list_description dd {
+    margin: 0;
+}
+
+#product_list .list_actions {
+    font-size: x-small;
+    text-align: right;
+    padding-left: 1em;
+}
+
+#product_list .list_line_even {
+    background: #e0f8f8;
+}
+
+#product_list .list_line_odd {
+    background: #f8b0f8;
+}
+
+/* START:mainlayout */
+/* Styles for main page */
+#cart table {
+    border-top: 1px dotted #595;
+    border-bottom: 1px dotted #595;
+    margin-bottom: 10px;
+}
+
+/* END:cartside */
+/* Styles for order form */
+.depot_form fieldset {
+    background: #efe;
+}
+
+.depot_form legend {
+    color: #dfd;
+    background: #141;
+    font-family: sans-serif;
+    padding: 0.2em 1em;
+}
+
+.depot_form label {
+    width: 5em;
+    float: left;
+    text-align: right;
+    padding-top: 0.2em;
+    margin-right: 0.1em;
+    display: block;
+}
+
+.depot_form select, .depot_form textarea, .depot_form input {
+    margin-left: 0.5em;
+}
+
+.depot_form .submit {
+    margin-left: 4em;
+}
+
+.depot_form div {
+    margin: 0.5em 0;
+}
+

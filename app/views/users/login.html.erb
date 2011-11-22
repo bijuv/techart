@@ -1,0 +1,17 @@
+<div id='left-side'>
+	<h1>Login</h1>
+	<p> <%= flash[:notice] %></p>
+	<h2>Please enter your details</h2>
+	<%= form_for(:user,:url => {:controller => "users", :action => "verify"}) do |f| %>
+		<table cellspacing="1"><tr>
+			<td><%= f.label :"Name :" %></td>
+			<td><%= f.text_field :user_name, :maxlength => "15" %></td></tr>
+			<tr><td><%= f.label :"Password:"%></td>
+			<td><%= f.password_field :password, :maxlength => "15" %></td></tr>
+		<table cellspacing="30"><tr>
+		<td><%= f.submit :Login, {:id => "button-color"}%></td>	
+	<%end%>
+		<td><%=button_to "Cancel", "/",  {:id => "button-color"}%></td>
+		</tr>
+		</table>
+</div>

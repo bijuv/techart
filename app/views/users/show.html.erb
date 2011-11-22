@@ -1,0 +1,11 @@
+<div id ='left-side'>
+	<%=render :partial => 'renders/side'%>
+</div>
+ 
+Name: <%= @user1.fname%> <%= @user1.lname%>
+
+<p>Age : <%= @user1.age%></p>
+
+<p>Address : <%= @user1.address%></p>
+
+<%= link_to "Back", :back %>

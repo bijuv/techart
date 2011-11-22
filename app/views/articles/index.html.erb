@@ -1,0 +1,26 @@
+<table cellspacing="10">
+	<tr>
+		<td> <b>Latest Articles</b> </td>
+		<td> <b>Popular Articles</b> </td>
+	</tr>
+	<tr>
+		<td>
+			<% @article1.each do |article| %>
+				<dl>
+					<dt><%=link_to article.art_title, article %></dt>
+					<dd><%=truncate(strip_tags(article.description),:length => 40)%></dd>
+					<br/>
+				</dl>
+			<%end%>
+		</td>
+		<td>
+			<% @article2.each do |article| %>
+				<dl>
+					<dt><%=link_to article.art_title, article %></dt>
+					<dd><%=truncate(strip_tags(article.description),:length => 40)%></dd>
+					<br/>
+				</dl>
+			<%end%>
+		</td>
+	</tr>
+</table>

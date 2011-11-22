@@ -1,0 +1,3 @@
+<h1>Techies Blog</h1>
+<p>Find me in app/views/articl/indx.html.erb</p>
+<%= button_to "new article", :action => :new %>

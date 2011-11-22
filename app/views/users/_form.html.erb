@@ -1,0 +1,40 @@
+<%= form_for(@user) do |f| %>
+<% if @user.errors.any? %>
+<h2><%= pluralize(@user.error.count,"error") %>prohibited this product from being saved:</h2>
+<ul>
+    <%@user.error.full_message.each do |msg| %>
+    <li>
+        <%= msg %>
+    </li>
+</ul>
+<% end %>
+<%end %>
+<table>
+	<tr>
+		<td>	<%= f.label :FirstName %> </td>
+		<td>	<%=f.text_field :fname %> </td>
+		<td>	<%= f.label :LastName %> </td>
+		<td>	<%=f.text_field :lname %> </td>
+	</tr>
+	
+	<tr>
+	<td>		<%= f.label :Username %> </td>
+	<td>		<%= f.text_field :user_name %> </td>
+	</tr>
+	
+	<tr>	
+		<td>	<%=f.label :Password %> </td>
+		<td>	<%= f.password_field :password %> </td>
+		<td>	<%= f.label :Retypepassword %> </td>
+		<td>	<%= f.password_field :password %> </td>
+	</tr>
+	<tr>
+		<td>	<%= f.label :Age %> </td>
+		<td>	<%= f.text_field :age %> </td>
+	</tr>	
+		<td>	<%= f.label :Address %> </td>
+		<td>	<%= f.text_area :address %> </td>
+		<td>	<%= f.submit%> </td>
+	</tr>		
+</table>
+<%end %>

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @article.art_title %>
+</p>
+	 By <%=link_to @article.user.user_name,@article.user%>
+
+<p>
+  <b>Description:</b>
+  <%= @article.description %>
+  
+</p>
+<%= render :partial => 'renders/comment_form' %>
+
+<% if @article.user.user_name == session[:user_id]%>
+	<%= link_to 'Edit', edit_article_path(@article) %>
+	<%= link_to 'Destroy', :controller => 'articles', :action => 'delete_article', :id => @article %>
+	<%= link_to 'Back',:back %>
+<%else%>
+	<%= link_to 'Back', :back %>
+<%end%>

@@ -1,0 +1,30 @@
+<div id="main">
+<%= form_for(@user) do |f| %>
+<% if @user.errors.any? %>
+<h2><%= pluralize(@user.error.count,"error") %>prohibited this product from being saved:</h2>
+<ul>
+    <%@user.error.full_message.each do |msg| %>
+    <li>
+        <%= msg %>
+    </li>
+</ul>
+<% end %>
+<%end %>
+<%= f.label :FirstName %>
+<%=f.text_field :fname %>
+<%= f.label :LastName %>
+<%=f.text_field :lname %>
+<br/>
+<%=f.label :Password %>
+<%= f.password_field :password %>
+<%= f.label :Retypepassword %>
+<%= f.password_field :password %>
+<br/>
+<%= f.label :Age %>
+<%= f.text_field :age %>
+<br/>
+<%= f.label :Address %>
+<%= f.text_area :address %>
+<%= f.submit %>
+<%end %>
+</div>
